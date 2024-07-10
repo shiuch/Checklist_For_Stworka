@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Чеклист для Stworka</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="checklist-item">
+      <div class="checklist-main">
+        <div class="checklist-progress">
+          <svg width="62" height="62" class="checklist-progress-svg">
+            <circle
+              class="checklist-progress-background"
+              cx="31"
+              cy="31"
+              r="29.5"
+            />
+            <!-- 
+            В checklist-progress-done, CSS переменной --progress устанавливается значение в %
+            2 = 2%
+            100 = 100%
+            В CSS файле устанавливатеся значение по умолчанию
+            -->
+            <circle
+              class="checklist-progress-done"
+              cx="31"
+              cy="31"
+              r="29.5"
+              stroke-linecap="round"
+              style="--progress: 2"
+            />
+          </svg>
+          <span class="checklist-progress-counter">0/7</span>
+        </div>
+        <div class="checklist-data">
+          <p class="checklist-tag">Чеклист</p>
+          <p class="checklist-done">
+            Выполнено<span class="checklist-done-colon">:</span> 0 из 7 действий
+          </p>
+          <p class="checklist-next">
+            Следующее действие: Созвониться с клиентом до 23.05.24 12:00
+          </p>
+        </div>
+      </div>
+      <a class="checklist-link" href="">Открыть чеклист</a>
+    </div>
+  </body>
+</html>

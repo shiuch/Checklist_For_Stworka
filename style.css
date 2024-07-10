@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --progress: 0; /* Начальное значение переменной, используется как значение по умолчанию */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checklist-item {
+  width: 743px;
+  height: 91px;
+  background-color: rgb(53, 121, 245);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 18px 15px 21px;
+}
+
+.checklist-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.checklist-progress {
+  position: relative;
+  display: flex;
+  margin-top: 3px;
+}
+
+.checklist-progress-svg {
+  transform: rotate(-90deg);
+  position: relative;
+}
+
+.checklist-progress-background {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 1px;
+}
+
+.checklist-progress-done {
+  position: absolute;
+  fill: none;
+  stroke: rgba(255, 255, 255);
+  stroke-width: 2px;
+  stroke-dasharray: 185px;
+  stroke-dashoffset: calc(185px - (185px * (var(--progress) / 100)));
+}
+
+.checklist-progress-counter {
+  width: max-content;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checklist-data {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transform: translate(-1px, -1px);
+}
+
+.checklist-tag {
+  width: max-content;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  background-color: rgb(35, 100, 219);
+  border-radius: 10px;
+  padding: 2px 14px 2px 13px;
+}
+
+.checklist-done {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.checklist-done-colon {
+  position: relative;
+  top: 1px;
+}
+
+.checklist-next {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  position: relative;
+  top: 1px;
+}
+
+.checklist-link {
+  border-radius: 6px;
+  text-decoration: none;
+  background-color: rgb(244, 248, 255);
+  color: rgb(53, 121, 245);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 26px 10px 25px;
+  margin-top: 3px;
+}
